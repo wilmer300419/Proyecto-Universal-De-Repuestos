@@ -67,7 +67,7 @@ jobs:
           --cov-report=xml --cov-report=term-missing:skip-covered --junitxml=reports/pytest.xml
       - name: Publicar reportes
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: reportes-pruebas
           path: |
@@ -113,7 +113,7 @@ jobs:
         run: python tools/mutation_score.py --umbral 50 --objetivo 60
       - name: Publicar reporte de mutación
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: reporte-mutacion
           path: |
