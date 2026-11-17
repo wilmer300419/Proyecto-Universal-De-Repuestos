@@ -1,0 +1,6 @@
+# Herramientas de desarrollo y CI (no se instalan en producción)
+-r requirements.txt
+pytest-cov>=5.0
+ruff>=0.6
+mutmut>=2.4,<3
+pip-audit>=2.7

@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+facturas/
+.mutmut-cache
+mutants/
+html/
+coverage.xml
+.coverage
+reports/
+mutation-report.json

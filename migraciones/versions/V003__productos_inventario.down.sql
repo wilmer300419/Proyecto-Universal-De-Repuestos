@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS inventory, car CASCADE;
+ALTER TABLE IF EXISTS product DROP CONSTRAINT IF EXISTS fk_product_spare_part;
+DROP TABLE IF EXISTS spare_part, product CASCADE;

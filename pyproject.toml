@@ -1,0 +1,23 @@
+[project]
+name = "repuestos-api"
+version = "3.0.0"
+description = "Universal de Repuestos WG: API Flask + PostgreSQL (MVC) con tienda web"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+extend-exclude = ["mutants"]
+
+[tool.ruff.lint]
+# E/W estilo, F errores, B bugs probables, S seguridad (bandit), C90 complejidad, SIM simplificaciones,
+# UP modernización, PL pylint, N nombres
+select = ["E", "W", "F", "B", "S", "C90", "SIM", "UP", "PLE", "PLW", "PLR0912", "PLR0915"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "PLR2004"]          # assert y contraseñas de prueba son legítimos en tests
+"sql/generar_datos.py" = ["S311", "E501"]                  # aleatoriedad con semilla fija para datos de ejemplo
+"tools/**" = ["S603", "S607"]
